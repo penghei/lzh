@@ -1,0 +1,16 @@
+
+.main{
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+}
+.ant-layout-header{
+   background: none;
+   height: 50px;
+   padding: 10px;
+}
+
+.content{
+    /* height: 700px; */
+
+}
