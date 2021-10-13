@@ -1,15 +1,31 @@
-.ant-space-item:nth-child(1) {
-    margin-top: 10vh;
+button.Login-Btn {
+    width: 100%;
 }
 
-.ant-space-item:nth-child(2), .ant-space-item:nth-child(3) {
-    width: 30vh;
-}
+div.LoginLogo span {
+    vertical-align: text-bottom;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    /* color: #1890ff; */
+    background-image: -webkit-gradient(
+        linear,
+        37.219838% 34.532506%,
+        36.425669% 93.178216%,
+        from(#29cdff),
+        to(#0a60ff),
+        color-stop(0.37, #148eff)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-.ant-space-vertical {
-    align-content: center;
-    align-items: center;
-}
-
-body {
+.LoginFooter {
+text-align: center;
+position: absolute;
+width: 100%;
+bottom: 0;
 }

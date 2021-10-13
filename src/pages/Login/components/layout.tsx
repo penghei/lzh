@@ -8,7 +8,8 @@ function LoginPageLayout(props) {
              alignContent: 'center',
              height: '100vh'
              }}>
-            <Row align="middle">
+                 {props.content}
+            {/* <Row align="middle">
                 <Col span={8}><div style={{height: '20vh'}}></div></Col>
                 <Col span={2}><div style={{height: '15vh'}}></div></Col>
             </Row>
@@ -27,7 +28,7 @@ function LoginPageLayout(props) {
             <Row align="middle">
                 <Col span={8}><div style={{height: '20vh'}}></div></Col>
                 <Col span={2}><div style={{height: '20vh'}}></div></Col>
-            </Row>
+            </Row> */}
         </div>
     )
 }
