@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Divider, Layout, Button, Breadcrumb } from 'antd';
+import { Divider, Layout, Button, Breadcrumb,Steps } from 'antd';
 import { HomeOutlined, UserOutlined } from '@ant-design/icons';
 import DataList from '@/components/DataList';
 import axios from 'axios';
 import { history } from 'umi';
 import AddList from '@/components/AddList';
 import '../styles/Organizations.css';
-
+const {Step} = Steps
 const { Header, Footer, Sider, Content } = Layout;
 
 interface dataListObj {
@@ -16,29 +16,10 @@ interface dataListObj {
 }
 export default class RequestList extends Component {
   state = {
-    nameList: [],
-    innerList: [],
+    nameList: ['组织1', '组织2'],
+    innerList: ['组织描述1', '组织描述2'],
   };
-  // componentDidMount() {
-  //   //删除后更新页面的list
-  //   PubSub.subscribe('dataList', (_: any, data: any[]) => {
-  //     if (data.length !== 0) {
-  //       data.forEach((obj: dataListObj) => {
-  //         let names: string[] = [];
-  //         let inners: string[] = [];
-  //         names.push(obj.name);
-  //         inners.push(obj.inner);
-  //         console.log(names, inners);
-  //         this.setState({
-  //           nameList: names,
-  //           innerList: inners,
-  //         });
-  //       });
-  //     }else{
-  //       return;
-  //     }
-  //   });
-  // }
+
   getDataList = (data: any[]) => {
     if (data.length !== 0) {
       data.forEach((obj: dataListObj) => {
@@ -88,9 +69,18 @@ export default class RequestList extends Component {
           <Content className="content">
             <AddList></AddList>
             <Divider></Divider>
+            <Steps current={4} size="small">
+              <Step title="创建组织" description="点击“创建新组织”按钮" />
+              <Step
+                title="输入组织设置"
+                description="在新页面中输入组织设置"
+              />
+              <Step title="提交并上传" description="稍等片刻" />
+              <Step title="创建成功"/>
+            </Steps>
+            <Divider></Divider>
             <DataList {...datas}></DataList>
           </Content>
-          
         </Layout>
       </div>
     );
