@@ -5,11 +5,11 @@
 Install dependencies,
 
 ```bash
-$ yarn
+$ yarn install 安装所有依赖和脚手架
 ```
 
 Start the dev server,
 
 ```bash
-$ yarn start
+$ yarn start 启动
 ```
