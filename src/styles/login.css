@@ -1,0 +1,15 @@
+.ant-space-item:nth-child(1) {
+    margin-top: 10vh;
+}
+
+.ant-space-item:nth-child(2), .ant-space-item:nth-child(3) {
+    width: 30vh;
+}
+
+.ant-space-vertical {
+    align-content: center;
+    align-items: center;
+}
+
+body {
+}
