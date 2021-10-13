@@ -9,7 +9,6 @@ import {
 import React from 'react';
 const { Header, Content, Footer, Sider } = Layout;
 import { history } from 'umi';
-import { Provider } from 'react-redux'
 import { Route } from '@umijs/core';
 const { SubMenu } = Menu;
 import '@/styles/index.css';
@@ -31,7 +30,7 @@ class Layouts extends React.Component {
             <img src={require('../../static/glimmer.png')} />
             <h1 className="welcome">欢迎使用管理员系统</h1>
           </div>
-          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+          <Menu theme="dark" defaultSelectedKeys={['1']} mode="vertical">
             <Menu.Item
               key="1"
               icon={<PieChartOutlined />}
