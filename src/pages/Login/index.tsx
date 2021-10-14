@@ -19,7 +19,11 @@ function LoginPage() {
             let target = state.userList.find(val => val.username === username);
             if (target && target.pwd === pwd) {
                 dispatch(updateName(username));
-                history.push('/admin');
+                if (target.isAdmin) {
+                    history.push('/admin');
+                } else {
+                    history.push('/user');
+                }
             } else {
                 message.error('用户名或密码错误');
             }

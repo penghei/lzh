@@ -66,7 +66,7 @@ export default class RequestList extends Component {
     }
   };
   routeChange = () => {
-    history.replace('/');
+    history.replace('/admin');
   };
   render() {
     return (
@@ -76,9 +76,9 @@ export default class RequestList extends Component {
             <Breadcrumb>
               <Breadcrumb.Item>
                 <HomeOutlined />
-                <a href="" onClick={this.routeChange}>
+                <span onClick={this.routeChange}>
                   首页
-                </a>
+                </span>
               </Breadcrumb.Item>
               <Breadcrumb.Item>
                 <UserOutlined />
